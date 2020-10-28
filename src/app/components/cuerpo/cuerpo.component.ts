@@ -27,14 +27,5 @@ export class CuerpoComponent implements OnInit {
     this.descripcionCuerpo = this.descripcion.getDescripcion();
   }
 
-  isImg(): Boolean{
-    for(let i = 0; i < this.descripcionCuerpo.length; i++){
-      if(this.descripcionCuerpo[i].url === null && this.descripcionCuerpo[i].url === ''){
-        return false;
-      }
-    }
-    return true;
-  }
-
 
 }

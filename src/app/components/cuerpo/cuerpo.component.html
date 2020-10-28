@@ -5,7 +5,7 @@
     <li data-target="#carouselIndicators" data-slide-to="1"></li>
     <!--<li data-target="#carouselIndicators" data-slide-to="2"></li>-->
   </ol>
-  <div class="carousel-inner">
+  <div class="carousel-inner imagenes">
       <div class="carousel-item active" >
         <img class="d-block w-100" src="{{imagenes.url1}}" alt="{{imagenes.title1}}">
       </div>
@@ -26,21 +26,20 @@
   </a>
 </div>
 
-  <div class="row mt-2 w-100">
-        <div class="card" style="height: auto;" *ngFor="let descripcion of descripcionCuerpo;" >
+  <div>
+        <div *ngFor="let descripcion of descripcionCuerpo;" >
           <div>
-            <div class="card-header">
+            <div class="my-5 mx-5">
               <h1 class="card-title">{{descripcion.title}}</h1>
-              <p class="card-text">{{descripcion.descripcion}}</p>
+              <p class="card-text text-justify ptamamio">{{descripcion.descripcion}}</p>
             </div>
-        </div>
+          </div>
           <div *ngIf="descripcion.url == null; else nover"></div>
-          <div class=" card card-img-botton">
+          <div>
             <ng-template #nover>
-              <img src="{{descripcion.url}}" alt="{{descripcion.title}}"/>
+              <img class="tamanio img-fluid col-12" src="{{descripcion.url}}" alt="{{descripcion.title}}"/>
             </ng-template>
           </div>
         </div>
   </div>
-
 </ng-container>
