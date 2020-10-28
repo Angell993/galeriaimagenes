@@ -3,7 +3,7 @@ export interface MenuTitle{
   url: string
 }
 
-export interface ImgTitle{
+export interface ImgGalery{
   title: string,
   url: string,
   descripcion: string

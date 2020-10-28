@@ -1,1 +1,10 @@
-<p>galeria works!</p>
+<div class="row tamanio">
+  <div *ngFor="let imag of imagen"  class="col-sm-4">
+    <div class="card my-3">
+        <img src="{{imag.url}}" class="card-img-top" alt="{{imag.descripcion}}"/>
+      <div class="card-body">
+        <h5 class="text-center">{{imag.title}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
