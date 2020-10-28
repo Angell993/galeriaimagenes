@@ -1,0 +1,16 @@
+<div>
+  <div *ngFor="let descripcion of descripcionCuerpo;" >
+    <div>
+      <div class="my-4">
+        <h1 class="card-title">{{descripcion.title}}</h1>
+        <p class="card-text text-justify ptamamio">{{descripcion.descripcion}}</p>
+      </div>
+    </div>
+    <div *ngIf="descripcion.url == null; else nover"></div>
+    <div>
+      <ng-template #nover>
+        <img class="img-fluid " src="{{descripcion.url}}" alt="{{descripcion.title}}"/>
+      </ng-template>
+    </div>
+  </div>
+</div>

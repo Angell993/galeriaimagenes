@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PiedepaginaComponent } from './components/piedepagina/piedepagina.component';
-import { CuerpoComponent } from './components/cuerpo/cuerpo.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { ContenidoComponent } from './components/contenido/contenido.component';
+import { CaruselcuerpoComponent } from './components/caruselcuerpo/caruselcuerpo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     PiedepaginaComponent,
-    CuerpoComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    ContactoComponent,
+    InicioComponent,
+    ContenidoComponent,
+    CaruselcuerpoComponent
   ],
   imports: [
     BrowserModule,

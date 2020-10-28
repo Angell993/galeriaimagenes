@@ -3,11 +3,11 @@ import { ContenidoCuerpo } from 'src/app/models/literales';
 import { ContenidocuerpoService } from 'src/app/services/contenidocuerpo.service';
 
 @Component({
-  selector: 'comp-cuerpo',
-  templateUrl: './cuerpo.component.html',
-  styleUrls: ['./cuerpo.component.scss']
+  selector: 'comp-caruselcuerpo',
+  templateUrl: './caruselcuerpo.component.html',
+  styleUrls: ['./caruselcuerpo.component.scss']
 })
-export class CuerpoComponent implements OnInit {
+export class CaruselcuerpoComponent implements OnInit {
 
   imagenes={
     title1: 'Love',
@@ -26,6 +26,5 @@ export class CuerpoComponent implements OnInit {
   ngOnInit(): void {
     this.descripcionCuerpo = this.descripcion.getDescripcion();
   }
-
 
 }

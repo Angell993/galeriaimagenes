@@ -25,21 +25,4 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-  <div>
-        <div *ngFor="let descripcion of descripcionCuerpo;" >
-          <div>
-            <div class="my-5 mx-5">
-              <h1 class="card-title">{{descripcion.title}}</h1>
-              <p class="card-text text-justify ptamamio">{{descripcion.descripcion}}</p>
-            </div>
-          </div>
-          <div *ngIf="descripcion.url == null; else nover"></div>
-          <div>
-            <ng-template #nover>
-              <img class="tamanio img-fluid col-12" src="{{descripcion.url}}" alt="{{descripcion.title}}"/>
-            </ng-template>
-          </div>
-        </div>
-  </div>
 </ng-container>
