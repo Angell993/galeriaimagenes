@@ -1,6 +1,6 @@
 export interface MenuTitle{
   title: string,
-  href: string
+  url: string
 }
 
 export interface ImgTitle{
