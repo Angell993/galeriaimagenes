@@ -12,24 +12,14 @@ export class ImagenesservicesService {
   constructor() {
     this.imagenes = [
       {
-        title: 'Love',
-        descripcion: 'Letras de amor',
-        url: this.ur + 'love.jpg'
+        title: 'Tecnologia',
+        descripcion: 'Tecnologia code',
+        url: this.ur + 'tecnologia.jpg'
       },
       {
-        title: 'Programador',
-        descripcion: 'Programador code',
-        url: this.ur + 'programador.jpg'
-      },
-      {
-        title: 'Love',
-        descripcion: 'Letras de amor',
-        url: this.ur + 'love.jpg'
-      },
-      {
-        title: 'Programador',
-        descripcion: 'Programador code',
-        url: this.ur + 'programador.jpg'
+        title: 'Tormenta',
+        descripcion: 'Tormenta code',
+        url: this.ur + 'tormenta.jpg'
       },
       {
         title: 'Love',
@@ -37,9 +27,9 @@ export class ImagenesservicesService {
         url: this.ur + 'love.jpg'
       },
       {
-        title: 'Programador',
-        descripcion: 'Programador code',
-        url: this.ur + 'programador.jpg'
+        title: 'Tormenta',
+        descripcion: 'Tormenta code',
+        url: this.ur + 'tormenta.jpg'
       },
       {
         title: 'Love',
@@ -47,9 +37,19 @@ export class ImagenesservicesService {
         url: this.ur + 'love.jpg'
       },
       {
-        title: 'Programador',
-        descripcion: 'Programador code',
-        url: this.ur + 'programador.jpg'
+        title: 'Tecnologia',
+        descripcion: 'Tecnologia code',
+        url: this.ur + 'tecnologia.jpg'
+      },
+      {
+        title: 'Tecnologia',
+        descripcion: 'Tecnologia code',
+        url: this.ur + 'tecnologia.jpg'
+      },
+      {
+        title: 'Tormenta',
+        descripcion: 'Tormenta code',
+        url: this.ur + 'tormenta.jpg'
       },
       {
         title: 'Love',
@@ -57,9 +57,9 @@ export class ImagenesservicesService {
         url: this.ur + 'love.jpg'
       },
       {
-        title: 'Programador',
-        descripcion: 'Programador code',
-        url: this.ur + 'programador.jpg'
+        title: 'Tormenta',
+        descripcion: 'Tormenta code',
+        url: this.ur + 'tormenta.jpg'
       },
       {
         title: 'Love',
@@ -67,9 +67,9 @@ export class ImagenesservicesService {
         url: this.ur + 'love.jpg'
       },
       {
-        title: 'Programador',
-        descripcion: 'Programador code',
-        url: this.ur + 'programador.jpg'
+        title: 'Tecnologia',
+        descripcion: 'Tecnologia code',
+        url: this.ur + 'tecnologia.jpg'
       }
     ];
    }

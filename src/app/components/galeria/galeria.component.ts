@@ -10,11 +10,22 @@ import { ImagenesservicesService } from 'src/app/services/imagenesservices.servi
 export class GaleriaComponent implements OnInit {
 
   imagen: ImgGalery[];
+  imagenResponse = {
+    title: '',
+    descripcion: '',
+    url: ''
+  }
 
   constructor( private imagenes: ImagenesservicesService) { }
 
   ngOnInit(): void {
     this.imagen = this.imagenes.getImagenes();
+  }
+
+  recibirImagen(title: string, desp: string, url:string){
+    this.imagenResponse.title = title;
+    this.imagenResponse.descripcion = desp;
+    this.imagenResponse.url = url;
   }
 
 }

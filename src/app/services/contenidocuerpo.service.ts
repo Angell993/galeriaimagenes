@@ -23,7 +23,7 @@ export class ContenidocuerpoService {
         Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\
         when an unknown printer took a galley of type and scrambled it to make a type specimen book.\
         It has survived not only five centuries, but also the leap into electronic typesetting,\ remaining essentially unchanged.\ ',
-        url: './assets/imagenes/update.jpg'
+        url: './assets/imagenes/tormenta.jpg'
       },
       {
         title:'Escribe un Titulo 33',

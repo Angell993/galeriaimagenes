@@ -12,8 +12,8 @@ export class CaruselcuerpoComponent implements OnInit {
   imagenes={
     title1: 'Love',
     url1: './assets/imagenes/love.jpg',
-    title2: 'Programador',
-    url2: './assets/imagenes/programador.jpg',
+    title2: 'tormenta',
+    url2: './assets/imagenes/tormenta.jpg',
     title3: 'Update',
     url3: './assets/imagenes/update.jpg'
   };
