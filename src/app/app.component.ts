@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent{
   ocultar:boolean;
 
-
   ocultarCarusel(ocultar: boolean){
       this.ocultar = ocultar;
   }
