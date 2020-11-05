@@ -1,1 +1,56 @@
-<p>galeria works!</p>
+<!-- en el form (ngSubmit) hace referencia al button de type='submit'
+ [formGroup]="buscarImagen"
+ (ngSubmit)="metodo en el .ts"
+ formGroupName="nombre del grupo", no me deja visualizar las imagenes precargadas
+ hay que buscar otra soluccion.
+-->
+<div class="position-buscador container mt-3 mb-4">
+  <form [formGroup]="imagenForm" class="form-inline my-2 my-lg-0 from-group"  (ngSubmit)="searchImg()">
+    <input formControlName="buscarImg" class="form-control mr-sm-2"
+    type="search" placeholder="Buscar" aria-label="Search">
+    <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+  </form>
+</div>
+<!-- Cargar Imagenes del Search -->
+<div >
+  <div *ngIf="!busquedaImg; else mostrarImg">
+    <p>Imagen no ecncontrada....</p></div> <!-- TODO: ver porque no se oculta este mensaje -->
+<ng-template #mostrarImg >
+    <div class="row tamanio">
+      <div *ngFor="let imag of imagenEncontrada" class="col-sm-4">
+
+        <div class="card my-3" >
+          <div>
+            <img src="{{imag.url}}" class="card-img-top btn-primary" data-toggle="modal"
+              data-target="#expandirimagen" alt="{{imag.title}}"
+              (click)="viewImageModal(imag.id,imag.title,imag.descripcion,imag.url, imag.tipo)"  height="400px"/>
+            <div class="card-body">
+              <h5 class="text-center mt-4 ">{{imag.title}}</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</ng-template>
+
+</div>
+
+<comp-galeriacuerpo></comp-galeriacuerpo>
+
+<!-- <div class="row tamanio">
+  <div *ngFor="let imag of listadoImagenes; let indice = index" class="col-sm-4">
+
+    <div class="card my-3" >
+      <div>
+        <img src="{{imag.url}}" class="card-img-top btn-primary" data-toggle="modal"
+          data-target="#expandirimagen" alt="{{imag.descripcion}}"
+          (click)="recibirImagen(imag.id,imag.title,imag.descripcion,imag.url, imag.tipo)"  height="400px"/>
+        <div class="card-body">
+          <h5 class="text-center mt-4 ">{{imag.title}}</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> -->

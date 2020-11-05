@@ -9,7 +9,7 @@
     <div *ngIf="descripcion.url == null; else nover"></div>
     <div>
       <ng-template #nover>
-        <img class="img-fluid " src="{{descripcion.url}}" alt="{{descripcion.title}}"/>
+        <img class="imagen-total" src="{{descripcion.url}}" alt="{{descripcion.title}}" width="100%" height="500rem"/>
       </ng-template>
     </div>
   </div>

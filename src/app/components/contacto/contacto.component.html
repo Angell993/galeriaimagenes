@@ -1,1 +1,59 @@
-<p>contacto works!</p>
+<!-- Quienes somos -->
+<!-- <div >
+  <div>
+    <h1>Quienes somos</h1>
+    <div>
+      <p>Como estamos</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="position-img">
+  <img [src]="imagen" height="450em" width="1000em"/>
+</div>
+
+<!-- Formulario -->
+
+<div class="mt-4 mb-3 text-dark">
+  <div class=" info-contacto">
+    <h4 class="mt-2 ml-2">Contacto</h4>
+    <form class="mt-2 ml-3" method="POST">
+    <div class="form-group mb-2">
+      <label class="text-blod">Nombre*</label><br>
+      <input type="text" class="tamanio-input"/>
+    </div>
+    <div class="form-group mb-2">
+      <label class="text-blod">Correo electrónico*</label><br>
+      <input type="email" placeholder="name@gmail.com" class="tamanio-input"/>
+    </div>
+    <div class="form-group mb-2">
+      <label class="text-blod">Descripción?</label><br>
+      <textarea type="text" class="tamanio-textarea"></textarea>
+    </div>
+    <div class="positio-button"><button class="btn btn-success" type="submit">Enviar</button></div>
+    </form>
+  </div>
+
+  <div class="position-info">
+    <div class=" ml-3 mt-2">
+      <table *ngFor="let personal of inforPersonal" class="mt-3 texto-right">
+        <tr>
+          <td><img src="{{personal.url}}" width="300em"/></td>
+        </tr>
+        <tr>
+          <td>{{personal.nombre}},&nbsp;{{personal.apellido}}</td>
+        </tr>
+        <tr>
+          <td>{{personal.movil}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- div para poner el numero de movil y cambiar la altura de textarea -->
+<!-- <div class="form-group mb-2">
+  <label class="text-blod">Número de móvil o teléfono</label><br>
+  <input type="text" class="tamanio-input"/>
+</div> -->

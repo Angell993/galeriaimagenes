@@ -10,6 +10,8 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ContenidoComponent } from './components/contenido/contenido.component';
 import { CaruselcuerpoComponent } from './components/caruselcuerpo/caruselcuerpo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GaleriacuerpoComponent } from './components/galeriacuerpo/galeriacuerpo.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,14 @@ import { CaruselcuerpoComponent } from './components/caruselcuerpo/caruselcuerpo
     ContactoComponent,
     InicioComponent,
     ContenidoComponent,
-    CaruselcuerpoComponent
+    CaruselcuerpoComponent,
+    GaleriacuerpoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
