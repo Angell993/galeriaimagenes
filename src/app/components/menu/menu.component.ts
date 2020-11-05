@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { MenuTitle } from 'src/app/models/literales';
+import { UrlTitle } from 'src/app/models/literales';
 
 @Component({
   selector: 'comp-menu',
@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
   @Output('ocultar') ocultar= new EventEmitter<boolean>();
   logo='./assets/imagenes/favicon.ico';
 
-titleMenu: MenuTitle[];
+titleMenu: UrlTitle[];
 
   constructor() {
     this.titleMenu = [
