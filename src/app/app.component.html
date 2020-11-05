@@ -1,4 +1,15 @@
-<comp-menu></comp-menu>
-<comp-cuerpo></comp-cuerpo>
-<router-outlet></router-outlet>
+<comp-menu (ocultar)="ocultarCarusel($event)"></comp-menu>
+
+<div class="my-1" *ngIf="ocultar === true">
+  <div>
+    <comp-caruselcuerpo></comp-caruselcuerpo>
+  </div>
+  <ng-template *ngIf="ocultar != true">
+    <comp-caruselcuerpo></comp-caruselcuerpo>
+  </ng-template>
+</div>
+
+<div class="container mt-1">
+  <router-outlet></router-outlet>
+</div>
 <comp-piedepagina></comp-piedepagina>

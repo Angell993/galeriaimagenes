@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuTitle } from 'src/app/models/literales';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UrlTitle } from 'src/app/models/literales';
 
 @Component({
   selector: 'comp-menu',
@@ -8,21 +8,33 @@ import { MenuTitle } from 'src/app/models/literales';
 })
 export class MenuComponent implements OnInit {
 
-titleMenu: MenuTitle[];
+  @Output('ocultar') ocultar= new EventEmitter<boolean>();
+  logo='./assets/imagenes/favicon.ico';
+
+titleMenu: UrlTitle[];
 
   constructor() {
     this.titleMenu = [
       {title: 'Inicio',
-       href: '#'},
+       url: '/inicio'},
       {title: 'Galeria',
-      href: '#'},
+      url: '/galeria'},
       {title: 'Contacto',
-      href: '#'}
+      url: '/contacto'}
     ];
 
    }
 
   ngOnInit(): void {
+
+  }
+
+  isVisibled(titulo: string){
+    if(titulo === 'Inicio'){
+      this.ocultar.emit(true);
+    }else{
+    this.ocultar.emit(false);
+  }
   }
 
 }

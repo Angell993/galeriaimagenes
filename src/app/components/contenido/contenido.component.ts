@@ -3,20 +3,11 @@ import { ContenidoCuerpo } from 'src/app/models/literales';
 import { ContenidocuerpoService } from 'src/app/services/contenidocuerpo.service';
 
 @Component({
-  selector: 'comp-cuerpo',
-  templateUrl: './cuerpo.component.html',
-  styleUrls: ['./cuerpo.component.scss']
+  selector: 'comp-contenido',
+  templateUrl: './contenido.component.html',
+  styleUrls: ['./contenido.component.scss']
 })
-export class CuerpoComponent implements OnInit {
-
-  imagenes={
-    title1: 'Love',
-    url1: './assets/imagenes/love.jpg',
-    title2: 'Programador',
-    url2: './assets/imagenes/programador.jpg',
-    title3: 'Update',
-    url3: './assets/imagenes/update.jpg'
-  };
+export class ContenidoComponent implements OnInit {
 
   descripcionCuerpo: ContenidoCuerpo[];
 
@@ -26,6 +17,5 @@ export class CuerpoComponent implements OnInit {
   ngOnInit(): void {
     this.descripcionCuerpo = this.descripcion.getDescripcion();
   }
-
 
 }

@@ -1,0 +1,42 @@
+<!-- Galeria de imagenes -->
+<!-- ngIf nos oculta las demas imagenes y solo muestra las imagenes buscadas -->
+<div>
+  <div *ngFor="let tipo of typeGalery" >
+    <div class="position-button mt-3"><h3>{{tipo.descripcion.toUpperCase()}}</h3></div>
+    <div class="row tamanio">
+      <div *ngFor="let imag of listadoImagenes" class="col-sm-4">
+
+        <div *ngIf="tipo.id == imag.tipo" class="card my-3" >
+          <div>
+            <img src="{{imag.url}}" class="card-img-top btn-primary" data-toggle="modal"
+              data-target="#expandirimagen" alt="{{imag.title}}"
+              (click)="viewImageModal(imag.id,imag.title,imag.descripcion,imag.url, imag.tipo)"  height="400px"/>
+            <div class="card-body">
+              <h5 class="text-center mt-4 ">{{imag.title}}</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <a class="btn btn-success my-auto my-sm-0 position-button" href="#">ir a cultura</a>
+  </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="expandirimagen" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content tamaniomodal">
+        <div class="modal-header">
+          <h5 class="modal-title" >{{imagenModal.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="{{imagenModal.url}}" alt="{{imagenModal.title}}" />
+          <div><p>{{imagenModal.descripcion}}</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
